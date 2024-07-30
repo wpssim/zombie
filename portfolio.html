@@ -59,8 +59,12 @@
             justify-content: space-between;
         }
         .video-container iframe {
-            width: calc((100% - 20px) / 2); /* Two videos per row */
-            height: 415px; /* Increased height by 100px */
+            width: calc((100% - 20px) / 2);
+            height: 415px; 
+        }
+        .full-width-video iframe {
+            width: 100%;
+            height: 415px; 
         }
     </style>
 </head>
@@ -71,6 +75,9 @@
         </header>
         <div class="section">
             <h2>client work ✦</h2>
+            <div class="video-container full-width-video">
+                <iframe src="https://www.youtube.com/embed/videoseries?si=rNZ2EiLL_EuGDZ6w&amp;list=PLHnm1_1RE0IeDbMohA3c0CpAc9wIvd2_9" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/Ug4afQ9nDHY?si=_dM9LLtTs0VOXTNX" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
                 <iframe src="https://www.youtube.com/embed/l1LV1VhwbRE?si=foDixtd3gQhdnvAX" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
