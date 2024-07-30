@@ -3,26 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PORTFOLIO</title>
+    <title>Portfolio</title>
     <style>
         body {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://i.pinimg.com/736x/53/c5/99/53c599ec2cbbdb237f3704d18e55d205.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+            animation-delay: 0.1s;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
         }
         #container {
-            width: calc(1.3 * 1120px); 
-            height: calc(1.3 * 1700px); 
+            width: calc(1.3 * 800px); 
+            height: 1430px; 
             background-color: #83a5e0;
             border: 2px solid #000000;
             padding: 20px;
             box-sizing: border-box;
             overflow-y: auto;
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+            animation-delay: 0.1s;
         }
         header {
             text-align: center;
@@ -53,7 +66,7 @@
 <body>
     <div id="container">
         <header>
-            <h1>PORTFOLIO</h1>
+            <h1>Portfolio</h1>
         </header>
         <div class="section">
             <h2>Client Work ✦</h2>
