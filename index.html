@@ -114,41 +114,12 @@
         .gallery img {
             width: 100%;
             height: auto;
-            max-width: 32%; 
+            max-width: 32%; /* Fit within margins */
             border: 2px solid #000000;
-            cursor: pointer; 
         }
         footer {
             text-align: center;
             margin-top: 20px;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8); 
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-content {
-            max-width: 90%;
-            max-height: 90%;
-        }
-
-        .modal-content img {
-            width: 100%;
-            height: auto;
-            border: 2px solid #fff;
-        }
-
-        .blurred {
-            filter: blur(5px);
         }
     </style>
 </head>
@@ -192,36 +163,14 @@
         <div class="section gallery">
             <h2>gallery 𖤐⭒⋆｡⋆⭒𖤐</h2>
             <div class="gallery-images">
-                <img src="images/zombiesgotoheaven.jpg" alt="Zombies Go to Heaven" class="gallery-image">
-                <img src="images/linoleum.jpg" alt="Linoleum" class="gallery-image">
-                <img src="images/to see the next part of the dream.jpg" alt="To See the Next Part of the Dream" class="gallery-image">
+                <img src="images/zombiesgotoheaven.jpg" alt="Zombies Go to Heaven">
+                <img src="images/linoleum.jpg" alt="Linoleum">
+                <img src="images/to see the next part of the dream.jpg" alt="To See the Next Part of the Dream">
             </div>
         </div>
         <footer>
             &copy; zombiesgotoheaven
         </footer>
     </div>
-
-    <div class="modal" id="imageModal">
-        <div class="modal-content">
-            <img src="" alt="Enlarged Image" id="modalImage">
-        </div>
-    </div>
-
-    <script>
-        const modal = document.getElementById('imageModal');
-        const modalImg = document.getElementById('modalImage');
-        const container = document.getElementById('container');
-        const galleryImages = document.querySelectorAll('.gallery-image');
-
-        galleryImages.forEach(image => {
-            image.addEventListener('click', function() {
-                modal.style.display = 'flex'; 
-                modalImg.src = this.src;       
-                container.classList.add('blurred'); 
-            });
-        });
-
-        modal.addEventListener('click', function(event) {
-            if (event.target !== modalImg) {
-                modal.style.display =
+</body>
+</html>
