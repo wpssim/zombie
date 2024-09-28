@@ -27,8 +27,8 @@
             }
         }
         #container {
-            width: calc(1.3 * 800px); /* 1.3 times the original width */
-            height: 1430px; /* Reduced height */
+            width: calc(1.3 * 800px);
+            height: 1430px; 
             background-color: #83a5e0;
             border: 2px solid #000000;
             padding: 20px;
@@ -65,6 +65,27 @@
         .full-width-video iframe {
             width: 100%;
             height: 415px; 
+        }
+
+        @media screen and (max-width: 768px) {
+            #container {
+                width: 100%;
+                height: auto;
+                padding: 10px;
+            }
+            .video-container {
+                flex-direction: column; /* Stack videos vertically on mobile */
+            }
+            .video-container iframe {
+                width: 100%; 
+                height: 300px; 
+            }
+            .full-width-video iframe {
+                height: 300px; 
+            }
+            .section {
+                margin: 10px 0; 
+            }
         }
     </style>
 </head>
