@@ -27,7 +27,7 @@
             }
         }
         #container {
-            width: 1040px; /* Increased width to make the site 30% wider */
+            width: 1040px; /* Desktop width */
             background-color: #83a5e0;
             border: 2px solid #000000;
             padding: 20px;
@@ -55,7 +55,7 @@
             display: flex;
             justify-content: space-between;
         }
-        .profile-section {
+        .profile-section, .spotlight-section {
             width: 45%;
             text-align: center;
         }
@@ -66,10 +66,6 @@
         }
         .profile-info {
             margin-top: 10px;
-        }
-        .spotlight-section {
-            width: 45%;
-            text-align: center;
         }
         .social-media-ascii {
             display: flex;
@@ -119,12 +115,45 @@
         .gallery img {
             width: 100%;
             height: auto;
-            max-width: 32%; /* Fit within margins */
+            max-width: 32%;
             border: 2px solid #000000;
         }
         footer {
             text-align: center;
             margin-top: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+            #container {
+                width: 100%; /* Full width on mobile */
+                padding: 10px; /* Reduce padding */
+            }
+            .profile-spotlight {
+                flex-direction: column;
+            }
+            .profile-section, .spotlight-section {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .social-media-ascii {
+                flex-direction: column;
+                align-items: center;
+            }
+            .social-media {
+                width: 100%;
+            }
+            .ascii-art {
+                width: 100%;
+                margin-top: 20px;
+            }
+            .gallery-images {
+                flex-direction: column;
+                align-items: center;
+            }
+            .gallery img {
+                max-width: 100%; /* Full width images */
+                margin-bottom: 10px;
+            }
         }
     </style>
 </head>
